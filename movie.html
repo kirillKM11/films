@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>MOVIES</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ACvSEYzBErvr-0k4y-clbkGmIpx1qIUvRXuFepmSE9rI4gXK4Rj7e32tuuaDXLxk_Vz_BM5ZOwmrtMAPc_KFqqCSsMzZoQ4sQfE_pmpld-KXPjPQo7rJwQ0gJbbrpe7ckSzvB23Gka_5qDM21Ss2Oyw6bRqhLPBHqeSKyA5KBN9pp46CgmkcOX5XvsebuIsFi69sIhNjvKOAtDQhJnyqCyXKINB7xngz-W3yUY_nAEZbWgg5xJrPUzIpLI50ZFjmNuCb3TERhDfHq17TInYfahZf2i8yrR7Md-8w8gNp9LjoQzpd_pkoAkOUqulBD-2fss7W50byIEgNHz4tytGl0k69l8YRbIBT4Fvbeg0S8Frn5uHINbclAlGmWuxUv28i32Oa9bvYF23JKUihdpMeOkxWb0CvBHgPmkijSVkNIlWZDUccYk0NiXMmpMmNvVY6FwFmJYfgGxid_sfzjHqQ-lvqTo47F1lR1udCAPpNqn8j2Lod0TE8EW5wG1fdQJXzgwMamnn2o_znqgnPpp_5g4Ve2BiuMwCjx_AYipj3avR_Pe_j5ejlN6qgUE0smkbkvH79one_vsrxluGaDrzORFePhMzE7qAqZESoRNPsecWJMUWtOq4uchYaE0fFmx5PhpLecUelw_AxYoc0Kar6_395iHs4tvpE0kd0f64vDv7Uv0U-L-6NJ-aE-vBmGoIvySQBOYl5aZyoaqxI18Hud7cRlbv55eaFz6yoYqSUP0I6C3k1KZGoj1wzXNpuOCF71yebIh4h96qkHQgiFLUj6I0utaRJv21FnKLem7fdz7w3O2GQmeuIUZDIVm7FkqtrZh43ydeXAR5X68GRpBtMEzCVyH24yzFKABWypONYCOxh1I3UEEw7Y4IiPvYxTfHGVhxkxv4T4YeMUFOuM_Nb-VxLxR_qNxzz_WvqAaVbSt8zyFd3E1-QHLI0X5AppYvPc79wnzxoN2OP6ljF_VQ3lqRuMhx4pt5HoMnDzDZZDBdo3k4cJPDS-0kIoxpk8-8tjJxj20ff2mbwwwR5cxZd4NnIfAwbhU7_ZsS7x5bxpzNKOPByTihD0QIMfuK3zKF56FDy5Zjyk7ROVoL0kAEwZCDYMH_X7LCws1s-Io1QIOfldf6dOn7zERLc6cRgKiL3Gmsw0rGDLD1vNK4PwFdc7dVkTfLcMq25BJwCptW8cNZDKDF8Ai0xX1zEpTfxxD9pjbmAgV3dQDYPTa3OjlqR0WsM9TP85fhIqcgF7V3gE5gLDN2yt4cFb-J1H6W3SVw0BR9pJPTYefB0XSezSDsfegdv3hTC8n4Ck47AZ583jHJ9Px7CGf7PFeGdCIdymEmDbFIbg9Q66x5L1RaAGFauVfivHfEB7_atABNAxiJecfvldvEqHWILgpCFJ7GNJI-TU44ZE8rSgQcK6reDhdwWyubsUvWd5MIb3_bPNCsAz-Ztyhwckmt5BrYPPZ0MvTcF2Onb97v0smbhq3urK2SYNGqSaIbaYCDFZ5xn_oCPcR03ldYirhYGwGdpdUrmarKBUyslFMd6BjFmeTlHJAhXpnb5JqOSX_Os_fW-h5Ybyl6HzEivTgV0OGginuI-dLlXaCHei7Bsu0xUq7KWQ_jH5P_hOHxPLCwjpY5tdKDPSHNN6k9wPmUE-f9FPsJ3CeZQPPmGfP8HGjk4TC-y0-Td1YGxpybQ0YbkGPkT4_znro1unUYZ-X17XkE3hi0pFLFz" charset="UTF-8"></script><style>
+		.maindiv{
+			margin: 10px;
+			display: flex;
+		}
+
+		#results{
+			width: 70%;
+			padding: 5px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+		.movie{
+			width: 10%;
+			padding: 5px;
+			margin-bottom: 10px;
+			position: relative;
+			border: solid 1px black;
+		}
+		.movie img {
+			max-height: 60%;
+			width: 100%;
+			margin: 0 auto;
+			align-content: center;
+		}
+		.movie button{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 5px;
+			margin-left: -5px;
+			border-radius: 5px;
+		}
+		.movie button:hover{
+			background-color: cadetblue;
+			opacity: 0.7;
+		}
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>Movie Search</h1>
+
+<form>
+
+	<label for="search">Search for a movie: </label>
+
+	<input type="search" name="search" id="search" placeholder="Enter movie title">
+
+	<label for="type">Type: </label>
+
+	<select id="type" name="type">
+
+		<option value="movie">Movie</option>
+
+		<option value="series">Series</option>
+
+		<option value="episode">Episode</option>
+
+	</select>
+
+	<input type="submit" value="Search">
+
+</form>
+
+<div class="maindiv">
+
+	<div id="results"></div>
+
+
+
+	<div id="details"></div>
+
+</div>
+
+<div id="pagination"></div>
+
+
+
+<script type="text/javascript">
+
+	function getMovies(page){
+
+		var search = document.getElementById("search").value;
+
+		var type = document.getElementById("type").value;
+
+		var	request = new XMLHttpRequest();
+
+		request.onreadystatechange = function(){
+
+		if(request.readyState === 4 && request.status === 200){
+
+			var movies = JSON.parse(request.responseText);
+
+			if(movies.Response === "False"){
+
+				document.getElementById("results").innerHTML = "<p>Movie not Found</p>";
+
+				document.getElementById("pagination").innerHTML = "";
+
+			} 
+
+			else{
+
+				var movieList = "";
+
+				for(var i = 0; i<movies.Search.length; i++){
+
+					var movie = movies.Search[i];
+
+					movieList += "<div class='movie'>";
+
+					movieList += "<img src='"+ movie.Poster + "'>";
+
+                    movieList += "<div id=\"" + movie.imdbID + "\">";
+
+					movieList += "<h2>" + movie.Title +"</h2>";
+
+					movieList += "<p>Type: "+movie.Type+"</p>";
+
+					movieList += "<p>Year: "+movie.Year+"</p>";
+
+					movieList += "<button onclick='showDetails(\"" + movie.imdbID + "\")'>Details</button>";
+
+					movieList += "</div>";
+
+					movieList += "</div>";
+
+				}
+
+				document.getElementById("results").innerHTML = movieList;
+
+				var totalPages = Math.ceil(movies.totalResults/10);
+
+				var paginationBtn = "";
+
+				for(var j=1; j<=totalPages; j++){
+
+					paginationBtn +="<button onclick='getMovies("+j+")'>"+j+"</button>";
+
+				}
+
+				document.getElementById("pagination").innerHTML = paginationBtn;
+
+			}
+
+		}
+
+	}
+
+	request.open("GET", "http://www.omdbapi.com/?s="+search+"&type="+type+"&apikey=54326f80&page="+page);
+
+	request.send();
+}
+document.querySelector("form").addEventListener("submit", function(event){
+
+	event.preventDefault();
+
+	getMovies(1);
+
+});
+
+</script>
+
+</body>
+
+</html>
